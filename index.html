@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      margin: 0 6rem;
+    }
+
+    .fullContainer {
+      margin: 20px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .bottomGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 3rem;
+      
+    }
+
+    .card {
+      display: flex;
+      height: 80%;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: hsl(236, 13%, 42%);
+      padding-left: 1rem;
+    }
+
+    .card h1 {
+      font-size: 2rem;
+      color: hsl(236, 13%, 42%);
+      padding-left: 1rem;
+    }
+
+    .card h3 {
+      padding-left: 1rem;
+    }
+
+    .card img {
+      width: 70%;
+    }
+    
+
+    .leftSide img {
+      width: 100%;
+    }
+
+    .rightSide {
+     background-color: hsl(240, 100%, 5%);
+     color: white;
+     padding: 15px;
+    }
+
+    .rightSide h1 {
+      color: hsl(35, 77%, 62%);
+    }
+
+    .rightSide p {
+      color: hsl(233, 8%, 79%); 
+    }
+
+    .menu a {
+      color: hsl(236, 13%, 42%); 
+      padding: .75rem;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+    }
+
+    .leftBottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 10px;
+    }
+
+    .leftBottomRight button {
+      background-color: hsl(5, 85%, 63%);
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      cursor: pointer;
+    }
+
+    .leftBottomRight p {
+      color: hsl(236, 13%, 42%)
+    }
+
+    .hamburgerMenu {
+      display: none;
+    }
+
+    .leftBottomRight button:hover {
+      background-color: black;
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media only screen and (max-width: 1100px) {
+
+      body {
+        margin: 0;
+      }
+
+      .rightSide h1 {
+        font-size: 1.5rem;  
+      }
+      .rightSide h3 {
+        font-size: 1rem;  
+      }
+      .rightSide p {
+        font-size: .75rem;  
+      }
+
+      .card div h1 {
+        font-size: 1.5rem;
+      }
+      
+      .card div h3 {
+        font-size: 1rem;
+      }
+      
+      .card div p {
+        font-size: .75rem;
+      }
+
+      .card img {
+        width: 50%;
+      }
+
+      .leftBottom h1 {
+        font-size: 1.5rem;
+
+      }
+
+      .leftBottomRight p {
+        font-size: .75rem;
+
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+
+body {
+  margin: 0;
+}
+
+.rightSide h1 {
+  font-size: 1.25rem;  
+}
+.rightSide h3 {
+  font-size: .75rem;  
+}
+.rightSide p {
+  font-size: .5rem;  
+}
+
+.card div h1 {
+  font-size: 1.25rem;
+}
+
+.card div h3 {
+  font-size: .75rem;
+}
+
+.card div p {
+  font-size: .5rem;
+}
+
+.card img {
+  width: 50%;
+}
+
+.leftBottom h1 {
+  font-size: 1.25rem;
+}
+
+.leftBottomRight p {
+  font-size: .5rem;
+}
+
+.card h1,h3,p{
+  margin: .1rem;
+}
+
+.menu {
+  display: none;
+}
+
+.hamburgerMenu {
+  display: block;
+  width: 4rem;
+}
+
+.hamburger-lines .line {
+  display: block;
+    height: 2px;
+    border-radius: 10px;
+    background: #333;
+    padding: .25rem;
+}
+
+.hamburgerMenu input {
+  display: none;
+}
+
+.hamburgerMenu-items {
+  display: none;
+  position: absolute;
+  background-color: white;
+  opacity: 90%;
+  width: 70vw;
+  height: 100vh;
+  left: 30%;
+  font-size: x-large;
+  font-weight: 600;
+  padding: 2rem;
+}
+
+
+.hamburgerMenu-items li {
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+
+.line2,.line3 {
+  margin-top: .25rem;
+}
+
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    margin: 0 1rem;
+  }
+
+  .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .bottomGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top: 3rem;
+      
+    }
+
+    .leftBottom {
+      display: grid;
+      grid-template-columns: 1fr;
+      
+    }
+
+    .leftBottom h1 {
+      margin: 0;
+    }
+
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="fullContainer">
+
+    <div class="header">
+      <img src="images/logo.svg" alt="logo">
+
+      <div class="menu">
+        
+        <a href="">Home</a>
+        <a href="">New</a>
+        <a href="">Popular</a>
+        <a href="">Trending</a>
+        <a href="">Categories</a>
+
+      </div>
+
+      <div class="hamburgerMenu">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="hamburgerMenu-items">
+            <li><a href="">Home</a></li>
+            <li><a href="">New</a></li>
+            <li><a href="">Popular</a></li>
+            <li><a href="">Trending</a></li>
+            <li><a href="">Categories</a></li>
+        </ul>
+    </div>
+
+    </div>
+
+    <div class="hero">
+      <div class="leftSide">
+        <img src="images/image-web-3-desktop.jpg" alt="image_web">
+        
+        <div class="leftBottom">
+          <h1>The Bright Future of Web 3.0?</h1>
+
+          <div class="leftBottomRight">
+            <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+              But is it really fulfilling its promise?</p>
+            <button>Read more</button>
+          </div>
+        </div>
+      </div>
+      <div class="rightSide">
+        <h1>New</h1>
+        <h3>Hydrogen VS Electric Cars</h3>
+        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <hr>
+        <h3>The Downsides of AI Artistry</h3>
+        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        <hr>
+        <h3>Is VC Funding Drying Up?</h3>
+        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        
+      </div>
+    </div>
+
+    <div class="bottomGrid">
+
+      <div class="card">
+        <img src="images/image-retro-pcs.jpg" alt="">
+        <div>
+          <h1>01</h1>
+          <h3>Reviving Retro PCs</h3>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/image-top-laptops.jpg" alt="">
+        <div>
+          <h1>02</h1>
+          <h3>Top 10 Laptops of 2022</h3>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/image-gaming-growth.jpg" alt="">
+        <div>
+          <h1>03</h1>
+          <h3>The Growth of Gaming</h3>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script>
+    let hamburgerMenu = document.querySelector('.hamburgerMenu')
+    let hamburgerMenuItems = document.querySelector('.hamburgerMenu-items')
+    
+    hamburgerMenu.addEventListener('click', () => {
+      if(hamburgerMenuItems.style.display === 'none') {
+      hamburgerMenuItems.style.display = 'block'} else {
+        hamburgerMenuItems.style.display = 'none'
+      }
+    })
+  </script>
+
+
+  <!--
+
+
+  01
+  Reviving Retro PCs
+  What happens when old PCs are given modern upgrades?
+
+  02
+  Top 10 Laptops of 2022
+  Our best picks for various needs and budgets.
+
+  03
+  The Growth of Gaming
+  How the pandemic has sparked fresh opportunities.
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Rajko Radojkovic</a>.
+  </div>-->
+</body>
+</html>
